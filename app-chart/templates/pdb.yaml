@@ -11,6 +11,6 @@ spec:
   minAvailable: {{ .Values.pdbMinAvailable }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "app-chart.name" . }}
+      app.kubernetes.io/name: {{ include "app-chart.fullname" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   minAvailable: {{ .Values.pdbMinAvailable }}
